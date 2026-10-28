@@ -1,0 +1,1188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:clamp(5px,1.8vw,24px);color:#e9e2cf;font-family:Inter,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0%,#0d5265a0,transparent 50%),radial-gradient(ellipse at 0% 80%,#10445455,transparent 40%),#030911}button{font:inherit;touch-action:manipulation;cursor:pointer}.app-shell{width:min(1440px,100%);margin:auto;padding:clamp(8px,1.5vw,21px);border:2px solid #294958;border-radius:13px;background:linear-gradient(145deg,#081f2cf5,#030d17);box-shadow:0 0 34px #00cddc1c,inset 0 0 35px #1c6d7c0f}.hero{display:grid;grid-template-columns:82px minmax(0,1fr) minmax(230px,310px);align-items:center;gap:16px;padding:5px 4px 15px;border-bottom:3px solid #1a4657;margin-bottom:13px}.skull-mark{display:grid;place-items:center;width:76px;height:76px;border:2px solid #3c8e9b;border-radius:50%;color:#7af3ef;font-size:50px;text-shadow:0 0 16px #20c6d5;background:radial-gradient(circle,#164859,#061622 70%)}.eyebrow{margin:0 0 6px;font-size:9px;letter-spacing:2px;font-weight:700;color:#60e4e6}h1,h2,.frame-heading{font-family:Cinzel,Georgia,serif}h1{margin:0;line-height:1}h1 span{display:block;font-size:clamp(16px,2vw,27px);color:#8cecf0}h1 strong{display:block;margin-top:4px;font-size:clamp(24px,3.1vw,42px);color:#f1d59b}.tagline{color:#c5e6e8;margin:9px 0 0;font-size:clamp(10px,1.1vw,14px);line-height:1.5}.mission{padding:11px 15px;color:#201b17;background:linear-gradient(135deg,#e5c99a,#f4dfb6 48%,#c7a16c);border:4px solid #7b5532;box-shadow:inset 0 0 0 2px #f6e3b8,0 5px #08131c}.mission h2{text-align:center;font-size:18px;margin:0 0 8px}.mission p{margin:6px 0;font:700 12px Cinzel,Georgia,serif}.level-strip{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin-bottom:13px;padding:9px 11px;border:1px solid #294d5e;border-radius:8px;background:#071824}.level-strip>b{font-size:9px;letter-spacing:1px;color:#a8cbd5;white-space:nowrap}.level-tabs{display:flex;justify-content:center;gap:6px}.level-tab{display:grid;grid-template-columns:20px auto;grid-template-rows:auto auto;gap:0 4px;align-items:center;text-align:left;padding:6px 9px;border:1px solid #31576a;border-radius:6px;color:#b7ced7;background:#091c2a;font-size:17px}.level-tab b{font:700 10px Cinzel,serif}.level-tab small{font-size:7px;letter-spacing:1px;color:#7798a7}.level-tab.active{border-color:#ddbb78;background:#173b4b}.level-tab.active:first-letter{color:#f2d38e}.audio-controls{display:flex;align-items:center;justify-content:flex-end;gap:6px}.audio-controls button{padding:8px 9px;border:1px solid #397287;border-radius:6px;color:#cce5eb;background:#0b2535;font-size:11px;white-space:nowrap}.audio-controls button[aria-pressed=true]{border-color:#53dfd8;color:#7cf3e9}.play-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,325px);gap:13px}.map-frame{min-width:0;border:3px solid #34596a;border-radius:10px;padding:8px;background:linear-gradient(145deg,#102d3a,#06131f);box-shadow:inset 0 0 20px #0009}.frame-heading{display:flex;align-items:center;gap:8px;padding:3px 3px 9px;color:#e6c78b;font-size:11px;letter-spacing:1px}.frame-heading>span:first-of-type{color:#4edbe4}.frame-heading i{height:1px;flex:1;background:linear-gradient(90deg,#8e693b,transparent)}.frame-heading small{font:600 8px Inter,sans-serif;color:#62dfe2;white-space:nowrap}.canvas-wrap{position:relative;overflow:hidden;border:2px solid #285566;background:#071d2a;line-height:0}canvas{display:block;width:100%;height:auto;aspect-ratio:10/7}.start-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;line-height:1.5;background:#020d17cc;backdrop-filter:blur(3px)}.start-overlay.hidden{display:none}.compass{display:grid;place-items:center;width:43px;height:43px;border:1px solid #d9b775;border-radius:50%;color:#f0cf87;font-size:27px;margin-bottom:7px}.start-overlay h2{margin:5px 0 7px;color:#f1d59b;font-size:clamp(22px,3vw,36px)}.start-overlay p:not(.eyebrow){max-width:380px;color:#d0e2e7;font-size:12px;line-height:1.5}#start-btn{border:1px solid #ffe09a;border-radius:7px;padding:11px 18px;color:#19212a;background:linear-gradient(#f5d58b,#bd8a40);font-weight:800}.toast{position:absolute;left:50%;bottom:10px;transform:translate(-50%,10px);max-width:90%;padding:8px 12px;border:1px solid #4ecbd4;border-radius:6px;background:#041824ef;color:#d9ffff;font-size:11px;line-height:1.4;text-align:center;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.legend{display:flex;gap:11px;flex-wrap:wrap;padding:10px 3px 1px;color:#afc9d1;font-size:9px}.legend span:nth-child(1){color:#58d9e4}.legend span:nth-child(2){color:#9cb0c1}.legend span:nth-child(3){color:#ffd45e}.legend span:nth-child(4){color:#c28cff}.legend span:nth-child(5){color:#f1c46b}.control-panel{min-width:0;border:3px solid #345565;border-radius:10px;padding:11px;background:linear-gradient(160deg,#071c2a,#03101b);box-shadow:inset 0 0 22px #0008}.control-panel section+section{border-top:1px solid #284655;margin-top:11px;padding-top:11px}.control-panel h2{margin:0 0 6px;color:#e9c987;font-size:14px;letter-spacing:.4px}.help{color:#c1d4de;font-size:10px;line-height:1.5;margin:5px 0 9px}.dpad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,53px);gap:6px;max-width:245px;margin:auto}.dpad button{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #3b8194;border-radius:7px;color:#ccecf0;background:linear-gradient(145deg,#123c50,#091f31);box-shadow:inset 0 0 0 1px #07131e,0 3px #02090f;user-select:none}.dpad button span,.dpad button:not([disabled]){font-size:28px;color:#45dff0;font-weight:800}.dpad button small{font-size:7px;letter-spacing:1px;color:#89aebc}.dpad button:active{transform:translateY(2px);filter:brightness(1.3)}.dpad button:disabled{color:#e9c987;font-size:21px;opacity:.55;cursor:default}.quest{display:grid;gap:5px;margin:8px 0}.quest p{display:flex;justify-content:space-between;gap:6px;align-items:center;margin:0;padding:7px;border:1px solid #1f4050;border-radius:5px;background:#061521;color:#b8d0d9;font-size:10px}.quest b{font-size:8px;letter-spacing:.6px;color:#e0b76f}.quest b.done{color:#71e5b2}.message{margin:8px 0 0;padding:9px;border-left:3px solid #38cad5;background:#0b2735;color:#d4e7ec;font-size:10px;line-height:1.5;min-height:45px}.riddle-text{margin:8px 0;color:#e8d8ad;font:11px/1.6 Cinzel,Georgia,serif}.answers{display:grid;gap:5px}.answers button,.tools button{border:1px solid #31576a;border-radius:5px;padding:7px 9px;text-align:left;background:#0a2130;color:#c6dce4;font-size:10px}.answers button:hover,.tools button:hover{border-color:#e4c27c;color:#ffe5a5}.answers button:disabled{opacity:.45}.feedback{margin:7px 0 0;color:#85a9b7;font-size:9px;line-height:1.4}.locked .answers{opacity:.45;pointer-events:none}.tools{display:grid;grid-template-columns:1fr 1fr;gap:6px}.tools button{text-align:center}.status-bar{display:grid;grid-template-columns:62px 1fr 100px;gap:11px;align-items:center;margin-top:13px;padding:9px 12px;border:2px solid #304d5c;border-radius:8px;background:linear-gradient(90deg,#071623,#0b2636,#06121e)}.rose{display:grid;place-items:center;width:54px;height:54px;border:3px double #a47e4b;border-radius:50%;color:#d7b778;font-size:37px;background:#07131f}.status-bar small{color:#59dce4;font-size:8px;letter-spacing:1.7px;font-weight:700}.status-bar p{margin:5px 0 0;color:#d1e2e8;font-size:10px;line-height:1.4}.footer-ship{text-align:center;color:#37d8e1;font-size:34px;text-shadow:0 0 13px #00cbd7}.footer-ship span{display:block;margin-top:-17px;font-size:14px;letter-spacing:4px}.mobile-hint{display:none;text-align:center;color:#8eaeb9;font-size:10px;line-height:1.5;margin:10px 0}
+@media(max-width:950px){.hero{grid-template-columns:62px minmax(0,1fr);gap:12px}.skull-mark{width:58px;height:58px;font-size:38px}.mission{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:8px 11px}.mission h2{grid-column:1/-1;margin-bottom:1px}.mission p{font-size:10px;text-align:center;justify-content:center}.level-strip{grid-template-columns:1fr auto}.level-strip>b{grid-column:1/-1}.play-layout{grid-template-columns:minmax(0,1fr) 270px;gap:8px}.control-panel{padding:8px}.status-bar{grid-template-columns:45px 1fr 75px}.rose{width:42px;height:42px;font-size:29px}.footer-ship{font-size:29px}}
+@media(max-width:650px){body{padding:4px}.app-shell{padding:8px;border-radius:8px}.hero{grid-template-columns:42px minmax(0,1fr);gap:8px;padding-bottom:10px}.skull-mark{width:40px;height:40px;font-size:26px}h1 span{font-size:13px}h1 strong{font-size:clamp(21px,7vw,32px)}.eyebrow{font-size:7px;letter-spacing:1px}.tagline{font-size:10px;margin-top:6px}.mission{grid-template-columns:1fr;padding:8px}.mission h2{font-size:15px}.mission p{justify-content:flex-start;text-align:left;font-size:10px;margin:4px 0}.level-strip{grid-template-columns:1fr auto;gap:7px;padding:7px}.level-tabs{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.level-tab{padding:6px 4px;grid-template-columns:16px auto;font-size:15px}.level-tab b{font-size:8px}.level-tab small{font-size:6px}.play-layout{grid-template-columns:1fr}.map-frame{padding:5px}.frame-heading{font-size:9px;gap:5px}.frame-heading small{font-size:7px}.legend{gap:9px;font-size:8px}.control-panel{padding:10px}.dpad{grid-template-rows:repeat(2,52px);max-width:280px}.control-panel h2{font-size:13px}.answers{grid-template-columns:repeat(3,minmax(0,1fr))}.answers button{text-align:center;padding:8px 4px;font-size:9px}.status-bar{grid-template-columns:34px minmax(0,1fr);gap:7px;padding:7px;margin-top:9px}.rose{width:31px;height:31px;font-size:22px;border-width:2px}.status-bar p{font-size:9px}.footer-ship{display:none}.mobile-hint{display:block}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Comic dialogue, countdown, and dramatic mobile-friendly effects */
+.timer-hud{display:none;position:absolute;top:10px;right:10px;z-index:4;min-width:112px;padding:7px 10px;border:2px solid #d64b58;border-radius:7px;background:#210b13ed;color:#ffd9a4;text-align:center;box-shadow:0 0 18px #f32b4c55;line-height:1.2}.timer-hud.visible{display:block;animation:timerPulse 1s infinite alternate}.timer-hud span{display:block;font-size:7px;letter-spacing:1px;font-weight:800}.timer-hud b{display:block;font:800 25px Cinzel,Georgia,serif;color:#ff7d80}.timer-hud.urgent{background:#520c17;box-shadow:0 0 24px #ff1f3d99;animation:timerPulse .45s infinite alternate}@keyframes timerPulse{to{transform:scale(1.04)}}
+.comic-bubble{display:none;position:absolute;left:5%;bottom:5%;z-index:5;width:min(390px,88%);padding:12px 15px;border:2px solid #172c3c;border-radius:12px 12px 12px 3px;background:linear-gradient(135deg,#fff3d3,#e4c58d);color:#152331;box-shadow:5px 6px 0 #06121acc,0 0 22px #56eaf244;line-height:1.4}.comic-bubble.visible{display:block;animation:bubblePop .22s cubic-bezier(.2,.8,.2,1)}@keyframes bubblePop{from{opacity:0;transform:translateY(9px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}.bubble-name{display:block;margin-bottom:4px;font:800 9px Cinzel,Georgia,serif;letter-spacing:1.2px;color:#9a4d2b}.comic-bubble p{margin:0;padding-right:18px;font:600 12px/1.5 Cinzel,Georgia,serif}.comic-bubble button{position:absolute;right:5px;top:4px;border:0;background:transparent;color:#243848;font-size:19px;font-weight:800;padding:0 4px}
+@media(max-width:650px){.timer-hud{top:5px;right:5px;min-width:76px;padding:5px}.timer-hud span{font-size:6px}.timer-hud b{font-size:20px}.comic-bubble{left:3%;bottom:3%;width:94%;padding:10px 12px}.comic-bubble p{font-size:11px}}
+
+/* ✨ Enchanted, animated sea atmosphere */
+body{background-color:#020710;background-image:radial-gradient(2px 2px at 12% 18%,#a9ffff99 50%,transparent 65%),radial-gradient(1.5px 1.5px at 76% 32%,#fff0b699 50%,transparent 65%),radial-gradient(2px 2px at 44% 74%,#56e7ff88 50%,transparent 65%),radial-gradient(1px 1px at 88% 84%,#ffffff88 50%,transparent 65%),radial-gradient(ellipse at 50% 0%,#0d5265a0,transparent 50%),radial-gradient(ellipse at 0% 80%,#10445455,transparent 40%),#030911;background-size:230px 230px,290px 290px,190px 190px,260px 260px,auto,auto,auto;animation:starDrift 22s linear infinite}
+@keyframes starDrift{0%{background-position:0 0,0 0,0 0,0 0,center top,left bottom,center}100%{background-position:230px 460px,-290px 290px,190px -380px,-260px 520px,center top,left bottom,center}}
+.app-shell{position:relative;isolation:isolate;overflow:hidden}
+.app-shell:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 30%,#00eaff12,transparent 22%),radial-gradient(circle at 85% 60%,#9b58ff12,transparent 25%);animation:auroraBreath 7s ease-in-out infinite alternate}
+@keyframes auroraBreath{from{opacity:.45;transform:translateX(-2%)}to{opacity:1;transform:translateX(2%)}}
+.canvas-wrap:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 18% 28%,#8fffff14 0 1px,transparent 3px),radial-gradient(circle at 72% 64%,#ffe6a51c 0 1px,transparent 4px),radial-gradient(circle at 52% 12%,#b8ffff16 0 1px,transparent 3px);background-size:180px 150px,230px 210px,140px 180px;animation:sparkleFloat 8s linear infinite;mix-blend-mode:screen}
+@keyframes sparkleFloat{0%{background-position:0 0,0 0,0 0;opacity:.45}50%{opacity:1}100%{background-position:180px -150px,-230px 210px,140px -180px;opacity:.5}}
+.comic-bubble{display:flex;align-items:center;gap:12px;min-height:112px;padding:12px 34px 12px 12px;width:min(440px,92%);background:linear-gradient(135deg,#fff4d9,#e7c68d);border:2px solid #172c3c;box-shadow:5px 6px 0 #06121acc,0 0 24px #52eaff38}
+.comic-bubble:not(.visible){display:none}
+.dialogue-copy{flex:1;min-width:0}
+.captain-portrait{position:relative;flex:0 0 76px;width:76px;height:82px;border:2px solid #a96d3a;border-radius:9px;background:linear-gradient(#183e4b,#061522);box-shadow:inset 0 0 0 2px #e9c58b,0 0 12px #12c6db66;overflow:hidden;animation:portraitFloat 3s ease-in-out infinite}
+@keyframes portraitFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.captain-hat{position:absolute;z-index:3;left:9px;top:8px;width:56px;height:19px;background:linear-gradient(#1a2630,#080e17);border:2px solid #d9ad60;border-radius:60% 60% 20% 20%;transform:rotate(-4deg);box-shadow:0 4px #070c12}
+.captain-hat:before{content:"";position:absolute;left:-7px;right:-7px;bottom:-5px;height:7px;border-radius:50%;background:#101a22;border:1px solid #d8a65a}
+.captain-hat i{position:absolute;left:24px;top:3px;width:8px;height:8px;border-radius:50%;background:#d9b86d;box-shadow:0 0 7px #ffe2a3}
+.captain-face{position:absolute;left:19px;top:24px;width:38px;height:39px;border-radius:43% 43% 48% 48%;background:linear-gradient(90deg,#b8784f,#f0c28a 45%,#b8784f);border:1px solid #643e2c}
+.eye{position:absolute;top:12px;width:5px;height:7px;border-radius:50%;background:#17252a;animation:blinkEyes 4.2s infinite;box-shadow:0 0 3px #e9faff}
+.eye.left{left:8px}.eye.right{right:8px;animation-delay:.15s}
+@keyframes blinkEyes{0%,44%,48%,100%{transform:scaleY(1)}46%{transform:scaleY(.08)}}
+.eyebrow{position:absolute;top:8px;width:10px;height:3px;background:#35251e;border-radius:50%}
+.eyebrow.left{left:5px;transform:rotate(-12deg)}.eyebrow.right{right:5px;transform:rotate(12deg)}
+.nose{position:absolute;left:17px;top:17px;width:5px;height:8px;border-right:2px solid #8b543b;transform:rotate(12deg)}
+.moustache{position:absolute;left:5px;top:23px;width:29px;height:7px;border-radius:0 0 50% 50%;border-bottom:5px solid #382a23}
+.beard{position:absolute;left:7px;top:26px;width:24px;height:12px;background:#342820;clip-path:polygon(0 0,100% 0,82% 65%,50% 100%,18% 65%)}
+.captain-coat{position:absolute;bottom:-8px;left:9px;width:58px;height:30px;background:linear-gradient(90deg,#1a2631,#58342a,#101a27);border:2px solid #d2a35c;border-radius:15px 15px 0 0}
+.captain-coat:after{content:"✦";position:absolute;left:25px;top:4px;color:#e8c16e;font-size:12px}
+.bubble-name{font-size:9px;color:#9a4d2b}.comic-bubble p{font-size:12px;line-height:1.5}
+.answers button.correct-answer{border-color:#75e7a8;background:#153b32;color:#d8ffe9}
+.answers button.wrong-answer{animation:wrongShake .25s;border-color:#e77979}
+@keyframes wrongShake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+@media(max-width:650px){.captain-portrait{flex-basis:62px;width:62px;height:72px;transform:scale(.95)}.comic-bubble{gap:8px}}
+
+/* Boss-fight impact and spectral level atmosphere */
+body.boss-shake{animation:bossShake .62s linear}
+@keyframes bossShake{0%,100%{transform:translate(0,0)}15%{transform:translate(-5px,2px)}30%{transform:translate(5px,-2px)}45%{transform:translate(-4px,-1px)}60%{transform:translate(4px,2px)}75%{transform:translate(-2px,1px)}}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:0;background:radial-gradient(ellipse at center,#9b39ff55,transparent 68%);mix-blend-mode:screen}
+body.boss-shake:after{animation:krakenFlash .62s ease-out}
+@keyframes krakenFlash{0%{opacity:.95}100%{opacity:0}}
+/* The captain's portrait has a little more swashbuckling silhouette and wind-tossed hair. */
+.captain-face:before{content:"";position:absolute;z-index:-1;left:-8px;top:3px;width:52px;height:43px;background:repeating-linear-gradient(110deg,#241a18 0 5px,#4a3025 5px 8px);border-radius:45% 45% 35% 35%;transform:rotate(-5deg)}
+.captain-hat{height:22px;transform:rotate(-7deg) skewX(-5deg)}
+.captain-hat:after{content:"";position:absolute;right:5px;top:1px;width:11px;height:11px;border-radius:50%;background:#a8d8d7;border:2px solid #d8b56e;box-shadow:0 0 6px #a6ffff}
+.captain-coat:before{content:"";position:absolute;left:-8px;top:1px;width:15px;height:35px;background:#5a2729;transform:rotate(18deg);border-left:2px solid #d2a35c}
+#riddle-panel:not(.locked){border-color:#9b6bd7;box-shadow:0 0 18px #7f3ec033}
+#riddle-feedback{min-height:2em}
+
+/* Header repair: keep the eyebrow/title column from shrinking into a vertical stack. */
+.hero{grid-template-columns:76px minmax(0,1fr) minmax(245px,310px);align-items:center;column-gap:18px}
+.hero>div:nth-child(2){min-width:0;overflow-wrap:normal}
+.hero .eyebrow{white-space:nowrap;letter-spacing:1.5px;font-size:clamp(7px,.72vw,10px)}
+.hero h1{min-width:0}
+.mission{min-width:0}
+@media(max-width:950px){.hero{grid-template-columns:58px minmax(0,1fr)}.hero .eyebrow{white-space:normal;font-size:8px;letter-spacing:1.2px}}
+@media(max-width:650px){.hero{grid-template-columns:40px minmax(0,1fr)}.hero .eyebrow{font-size:7px;letter-spacing:.7px}}
+
+/* Captain identity field on the opening screen */
+.captain-name-label{margin:5px 0 3px;color:#67e4e7;font-size:9px;font-weight:800;letter-spacing:1.5px}
+#captain-name{width:min(280px,90%);padding:10px 12px;margin:0 0 10px;border:1px solid #477b8a;border-radius:7px;outline:none;background:#061b29;color:#f5e3b8;text-align:center;font:600 13px Georgia,serif;box-shadow:inset 0 0 12px #0008}
+#captain-name::placeholder{color:#7f9eaa}
+#captain-name:focus{border-color:#b58aff;box-shadow:0 0 12px #a26bff55}
+
+/* ===== Moonlit pirate-fantasy visual polish (theme-only; gameplay untouched) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap');
+:root{--moon-cyan:#75f3f0;--old-gold:#f0cf8b;--deep-ocean:#031019;--wood:#68432e}
+body{font-family:'IM Fell English',Georgia,serif;background:radial-gradient(ellipse at 50% -10%,#1d7885a8 0,transparent 35%),radial-gradient(ellipse at 12% 35%,#0a536355 0,transparent 28%),radial-gradient(ellipse at 90% 80%,#154a5b55 0,transparent 34%),#02070e;position:relative;isolation:isolate}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,#b9ffffbb 1px,transparent 1.8px),radial-gradient(circle,#57e4f477 1px,transparent 2px),radial-gradient(circle,#e8c98588 1px,transparent 2px);background-size:137px 113px,211px 177px,283px 231px;background-position:0 0,47px 68px,100px 29px;opacity:.38;animation:starlitDrift 34s linear infinite}
+@keyframes starlitDrift{from{background-position:0 0,47px 68px,100px 29px}to{background-position:137px 226px,-164px -109px,383px -202px}}
+.app-shell{border:2px solid #426879;border-radius:15px;background:linear-gradient(145deg,#061a25f5 0%,#04111cf7 55%,#081c29f5 100%);box-shadow:0 0 0 4px #08131b,0 0 42px #28dce51c,inset 0 0 50px #1d78851a;position:relative;overflow:hidden}
+.app-shell:before{content:"✦  ☾  ✦";position:absolute;top:8px;right:18px;color:#8de9e6;font-size:12px;letter-spacing:8px;opacity:.7;pointer-events:none}
+.hero{position:relative;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#3d7c89,#e0b86e,#3d7c89) 1;padding:12px 5px 18px;background:radial-gradient(ellipse at 68% 0%,#1c677755,transparent 45%)}
+.skull-mark{border-color:#6bd8d7;color:#a5fffa;background:radial-gradient(circle at 40% 30%,#236a79,#071b28 72%);box-shadow:0 0 0 4px #0a2732,0 0 23px #32d8e94a,inset 0 0 15px #55e9ef25}
+.hero .eyebrow{font-family:'Cinzel Decorative','Cinzel',Georgia,serif;color:#79efed;letter-spacing:2px;text-shadow:0 0 12px #3be5e477}
+h1,h2,.frame-heading,.mission p,.level-tab b,.riddle-text{font-family:'Cinzel Decorative','Cinzel',Georgia,serif}
+h1 span{color:#8ef5f1;text-shadow:0 0 18px #4be6e733;letter-spacing:.3px}
+h1 strong{color:#f5d89c;text-shadow:0 2px 0 #68452b,0 0 22px #e4b96825;letter-spacing:.4px}
+.tagline{font-family:'IM Fell English',Georgia,serif;font-size:clamp(13px,1.2vw,16px);color:#d2e8e8}
+.mission{position:relative;border:5px solid #755033;outline:1px solid #e5c58b;outline-offset:-8px;background:linear-gradient(135deg,#d8b985,#f5dfb3 48%,#c7a16d);box-shadow:0 6px 0 #07111a,0 0 18px #d7a85c22,inset 0 0 22px #fff2ce;transform:rotate(.25deg)}
+.mission h2{font-size:clamp(15px,1.4vw,20px);color:#24180f;text-shadow:0 1px #fff0d0}
+.mission p{font-size:clamp(9px,.9vw,12px);color:#332315}
+.level-strip{border-color:#3c6270;background:linear-gradient(100deg,#071924,#0a2431,#061520);box-shadow:inset 0 0 20px #1a5d6a1c}
+.level-tab{font-family:'Cinzel Decorative',Georgia,serif;transition:transform .18s,border-color .18s,box-shadow .18s}
+.level-tab:hover{transform:translateY(-2px);box-shadow:0 0 14px #55dfe522}
+.level-tab.active{border-color:#e2bd78;background:linear-gradient(145deg,#1b4655,#102b39);box-shadow:inset 0 0 0 1px #6ca5a2,0 0 15px #e6c17a20;color:#f6dfa8}
+.map-frame,.control-panel{border-color:#456c79;background:linear-gradient(145deg,#102d38,#061520 65%,#0b202b);box-shadow:inset 0 0 0 1px #79c5c51a,inset 0 0 28px #0008,0 4px 0 #02070b}
+.frame-heading{font-size:clamp(10px,1vw,13px);color:#f0d196;text-shadow:0 0 12px #e6bd6c24}
+.frame-heading>span:first-of-type{color:#7df1ee}
+.canvas-wrap{border:2px solid #39707b;box-shadow:inset 0 0 25px #0ce2e31c,0 0 0 3px #07121a}
+.control-panel h2{font-size:clamp(12px,1.1vw,15px);color:#f1cf8a;text-shadow:0 1px #50361f}
+.dpad button{border-color:#458b99;background:linear-gradient(145deg,#164657,#081b2a);box-shadow:inset 0 0 0 1px #0b1a22,0 3px 0 #02080d,0 0 12px #2fe5ef0b}
+.dpad button span,.dpad button:not([disabled]){color:#71f4f1;text-shadow:0 0 12px #40dbe966}
+.dpad button:active{box-shadow:inset 0 0 12px #48e4f355}
+.quest p{border-color:#315664;background:linear-gradient(90deg,#06141f,#0a202c);box-shadow:inset 0 0 12px #1e6d7710}
+.message{border-left-color:#7cf1e8;background:linear-gradient(90deg,#0b2b38,#081b27);font-family:'IM Fell English',Georgia,serif;font-size:12px}
+#riddle-panel{position:relative;border:1px solid #3b596b;border-radius:7px;padding:10px;background:linear-gradient(145deg,#071722,#0b202d)}
+#riddle-panel:not(.locked){background:radial-gradient(ellipse at 50% 0%,#7f45a52a,transparent 75%),linear-gradient(145deg,#171328,#081b29);border-color:#b58af0;box-shadow:0 0 0 1px #7653a855,0 0 22px #a75dff26,inset 0 0 20px #b58af00c}
+#riddle-panel:not(.locked):before{content:"✧  THE SEA WITCH SPEAKS  ✧";display:block;margin:0 0 7px;color:#d8b7ff;text-align:center;font:700 8px 'Cinzel Decorative',Georgia,serif;letter-spacing:1.2px}
+.riddle-text{font-size:clamp(10px,1vw,12px);color:#f2d9a2}
+.answers button,.tools button{font-family:'IM Fell English',Georgia,serif;font-size:12px;border-color:#426777;background:linear-gradient(145deg,#102e3e,#071824);transition:transform .16s,border-color .16s,filter .16s}
+.answers button:hover,.tools button:hover{border-color:#e4c27c;filter:brightness(1.18);transform:translateY(-1px)}
+.start-overlay{background:radial-gradient(ellipse at 50% 38%,#0d5262a8,transparent 52%),#020a13d9;backdrop-filter:blur(4px)}
+.start-overlay h2{font-family:'Cinzel Decorative',Georgia,serif;color:#f4d69a;text-shadow:0 0 22px #d6a85c33}
+.start-overlay .compass{box-shadow:0 0 24px #e5c27a30,inset 0 0 14px #d4b16b20}
+#start-btn{font-family:'Cinzel Decorative',Georgia,serif;letter-spacing:.5px;box-shadow:0 3px 0 #68421e,0 0 20px #f2d18a20}
+.status-bar{border-color:#4b6b78;background:linear-gradient(90deg,#07141f,#0d2c39,#07131d);box-shadow:inset 0 0 0 1px #b28c4c22}
+.rose{border-color:#b28b53;color:#f0d08e;box-shadow:0 0 14px #d9b66b18}
+.status-bar small{color:#75e8e5}
+.footer-ship{filter:drop-shadow(0 0 10px #25e6ef77)}
+@media(max-width:650px){.app-shell:before{font-size:9px;right:10px}.hero{background:radial-gradient(ellipse at 70% 0%,#1c677744,transparent 60%)}.mission{transform:none}.tagline{font-size:12px}.mission p{font-size:10px}}
+
+
+/* === Header: moonlit ghost ship + aged mission parchment === */
+.hero{grid-template-columns:76px minmax(0,1fr) minmax(115px,190px) minmax(245px,310px);gap:clamp(9px,1.2vw,18px)}
+.header-ship{position:relative;isolation:isolate;min-width:0;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border-radius:7px;background:radial-gradient(ellipse at 52% 65%,#1b7582a8 0%,#0a3a4b88 36%,transparent 70%)}
+.header-ship:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,transparent 15%,#03121a55 70%,#03121acc),radial-gradient(circle at 50% 20%,#b5faff3b,transparent 28%)}
+.ship-moon{position:absolute;top:5px;right:27%;font-size:31px;color:#c7f7f0;text-shadow:0 0 15px #7ef8ff;transform:rotate(-18deg)}
+.ship-stars{position:absolute;top:15px;left:12%;color:#a4f9f1;letter-spacing:8px;font-size:13px;text-shadow:0 0 8px #55e9ee;animation:shipSparkle 3s ease-in-out infinite alternate}
+.ship-art{position:relative;margin-top:12px;font-family:Georgia,serif;font-size:clamp(43px,5.5vw,72px);line-height:1;color:#101e2a;text-shadow:2px 2px 0 #a98250,-2px -1px 0 #d5b77d,0 0 13px #3ce7ef;filter:drop-shadow(0 0 12px #4bdfe866);transform:scaleX(1.18)}
+.ship-waves{position:absolute;bottom:21px;color:#51e8e9;letter-spacing:-3px;font-size:22px;text-shadow:0 0 9px #25dce7;animation:waveDrift 3.5s ease-in-out infinite alternate}
+.header-ship small{position:absolute;bottom:3px;max-width:100%;font:700 6px 'Cinzel Decorative',Georgia,serif;letter-spacing:1px;color:#9ce8e4;text-align:center;white-space:nowrap}
+@keyframes shipSparkle{from{opacity:.4;transform:translateY(2px)}to{opacity:1;transform:translateY(-3px)}}
+@keyframes waveDrift{from{transform:translateX(-5px)}to{transform:translateX(5px)}}
+/* The mission is paper, not a flat yellow card: layered inked edge, fibres and worn corners. */
+.mission{isolation:isolate;overflow:hidden;transform:rotate(.35deg);border:0!important;outline:0!important;border-radius:2px 5px 3px 4px;padding:15px 17px 14px!important;background:linear-gradient(112deg,#c8a16b 0%,#f0d8a7 9%,#f5e2bc 47%,#e7c995 82%,#c29a62 100%)!important;box-shadow:0 5px 0 #07111a,0 0 0 4px #68472e,0 0 0 6px #b58a53,inset 0 0 0 2px #fff0c9,inset 0 0 18px #9d6c372e!important}
+.mission:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.36;background-image:radial-gradient(ellipse at 5% 12%,#8a5c2d 0 1px,transparent 2px),radial-gradient(ellipse at 93% 18%,#8a5c2d 0 1px,transparent 2px),radial-gradient(ellipse at 9% 88%,#8a5c2d 0 1.2px,transparent 2px),radial-gradient(ellipse at 94% 90%,#8a5c2d 0 1px,transparent 2px),repeating-linear-gradient(7deg,transparent 0 8px,#8c693017 9px,transparent 10px 16px)}
+.mission:after{content:"✦";position:absolute;right:8px;bottom:2px;color:#986b3b;font-size:10px;opacity:.55}
+.mission h2{font-family:'Cinzel Decorative','Cinzel',Georgia,serif;color:#342013!important;text-shadow:0 1px #fff0cf!important}
+.mission p{font-family:'IM Fell English',Georgia,serif!important;font-size:clamp(10px,.88vw,13px)!important;color:#392716!important;text-shadow:0 1px #fff0d0}
+/* Keep the opening message on one line on desktop; allow a graceful wrap on narrow phones. */
+.start-overlay>.eyebrow{width:max-content;max-width:100%;white-space:nowrap;letter-spacing:clamp(.5px,.35vw,2px);font-size:clamp(8px,1vw,12px);text-shadow:0 0 13px #4be6e477}
+.start-overlay{padding:clamp(10px,2vw,24px)}
+@media(max-width:1050px){.hero{grid-template-columns:62px minmax(0,1fr) minmax(100px,150px)}.header-ship{grid-column:3;grid-row:1;height:100px}.mission{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.mission h2{grid-column:1/-1}.mission p{text-align:center}}
+@media(max-width:650px){.hero{grid-template-columns:42px minmax(0,1fr);gap:8px}.header-ship{grid-column:1/-1;grid-row:auto;height:90px;order:3}.mission{grid-column:1/-1;grid-template-columns:1fr;padding:12px 15px!important;order:4}.mission h2{grid-column:1/-1}.mission p{text-align:left;font-size:11px!important}.start-overlay>.eyebrow{white-space:normal;width:auto;max-width:100%;font-size:clamp(8px,2.5vw,11px);line-height:1.35}.start-overlay .compass{width:32px;height:32px;font-size:21px;margin-bottom:3px}.start-overlay h2{font-size:clamp(18px,5vw,27px)}.start-overlay p:not(.eyebrow){margin:5px 0;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.header-ship *{animation:none!important}}
+
+
+/* CINEMATIC FIVE-SECOND INTRO */
+.cinematic-intro{position:absolute;inset:0;z-index:20;display:none;overflow:hidden;background:#020711;color:#eafcff;isolation:isolate;line-height:1.4}
+.cinematic-intro.active{display:flex;align-items:center;justify-content:center;animation:introFadeIn .8s ease both}
+.intro-sky{position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 22%,#1b7181 0%,#0b3547 28%,#041421 65%,#01070d 100%)}
+.intro-art{position:absolute;inset:-3%;background-image:linear-gradient(180deg,#00101830,#02081275),url("level1-scene.jpg");background-size:cover;background-position:center 48%;opacity:.74;transform:scale(1.04);animation:sceneDrift 12s ease-in-out infinite alternate;transition:filter .8s ease,background-image .5s ease;z-index:0}
+.intro-sky:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#00101a35 0%,transparent 34%,#0207106b 100%)}
+.cinematic-intro.level-1 .intro-art{background-image:linear-gradient(180deg,#00352c1c,#001b2060),url("level1-scene.jpg");filter:saturate(1.05) hue-rotate(0deg)}
+.cinematic-intro.level-2 .intro-art{background-image:linear-gradient(180deg,#18002c38,#10001f78),url("level2-scene.jpg");filter:saturate(1.2) hue-rotate(7deg)}
+.cinematic-intro.level-3 .intro-art{background-image:linear-gradient(180deg,#32000a35,#19000680),url("level3-scene.jpg");filter:saturate(1.3) hue-rotate(-12deg)}
+.cinematic-intro.level-1 .intro-caption{border-color:#4cf7d7aa;border-left-color:#42f3d1;box-shadow:0 0 35px #00ffcc22}
+.cinematic-intro.level-2 .intro-caption{border-color:#d58affbb;border-left-color:#be62ff;box-shadow:0 0 35px #b000ff33}
+.cinematic-intro.level-3 .intro-caption{border-color:#ff695fbb;border-left-color:#ff413b;box-shadow:0 0 35px #ff1c1838}
+.cinematic-intro.level-1 .intro-caption p{color:#9fffee;text-shadow:0 0 18px #2dffe755}
+.cinematic-intro.level-2 .intro-caption p{color:#e8b4ff;text-shadow:0 0 18px #c43bff77}
+.cinematic-intro.level-3 .intro-caption p{color:#ffb0a2;text-shadow:0 0 18px #ff312f88}
+.cinematic-intro.level-2 .intro-mist{background:radial-gradient(ellipse at 25% 55%,#d49aff48,transparent 35%),radial-gradient(ellipse at 72% 35%,#a347ff40,transparent 40%);animation:mistSweep 3.2s ease-in-out infinite alternate}
+.cinematic-intro.level-3 .intro-mist{background:radial-gradient(ellipse at 25% 55%,#ff644b40,transparent 35%),radial-gradient(ellipse at 72% 35%,#ff1d3540,transparent 40%);animation:stormMist 1.8s ease-in-out infinite alternate}
+.intro-art~.intro-moon,.intro-art~.intro-stars,.intro-art~.intro-cloud,.intro-art~.intro-ship,.intro-art~.intro-sea,.intro-art~.intro-mist{z-index:1}
+.cinematic-intro.level-2 .intro-moon{background:radial-gradient(circle at 38% 32%,#fff0ff,#ca9cff 42%,#692a9d 78%);box-shadow:0 0 30px #d58affaa,0 0 95px #a12cff77}
+.cinematic-intro.level-3 .intro-moon{background:radial-gradient(circle at 38% 32%,#fff0e7,#ff9c83 42%,#8b1b31 78%);box-shadow:0 0 30px #ff6b55aa,0 0 95px #ff203877}
+@keyframes sceneDrift{from{transform:scale(1.04) translateX(-.5%)}to{transform:scale(1.12) translateX(.7%)}}@keyframes stormMist{from{transform:translateX(-8%) translateY(0);opacity:.55}to{transform:translateX(9%) translateY(-2%);opacity:.95}}
+.intro-moon{position:absolute;width:clamp(100px,20vw,190px);aspect-ratio:1;left:50%;top:8%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 38% 32%,#f3ffff 0%,#b9f5f4 30%,#68b8c8 62%,#2b637b 100%);box-shadow:0 0 22px #8ffaff99,0 0 85px #42d8e855;animation:moonBreathe 4s ease-in-out infinite}
+.intro-moon:after{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle at 65% 35%,#285a6b44 0 5%,transparent 6%),radial-gradient(circle at 33% 64%,#285a6b33 0 8%,transparent 9%);}
+.intro-stars{position:absolute;top:8%;left:0;width:100%;text-align:center;color:#b8ffff;letter-spacing:8px;text-shadow:0 0 12px #72faff;animation:starsFlicker 2.5s ease-in-out infinite}
+.intro-ship{position:absolute;left:50%;top:30%;width:clamp(150px,35%,310px);height:36%;transform:translateX(-50%);animation:introShipSail 5s ease-in-out both;filter:drop-shadow(0 0 20px #1af5f055)}
+.intro-mast{position:absolute;left:49%;top:0;width:4px;height:75%;background:linear-gradient(90deg,#3b291e,#d0b07b,#291c17);box-shadow:0 0 6px #9eefff66}
+.intro-sail{position:absolute;top:12%;background:linear-gradient(135deg,#e5e2ca,#8caeb2 75%,#2a6575);opacity:.92;filter:drop-shadow(0 0 8px #8afaff33)}
+.intro-sail:after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 48%,#142d39 49% 52%,transparent 53%),linear-gradient(30deg,transparent 48%,#142d39 49% 51%,transparent 52%)}
+.sail-one{left:9%;width:39%;height:48%;clip-path:polygon(100% 0,100% 100%,0 82%,18% 15%)}
+.sail-two{left:52%;width:36%;height:38%;clip-path:polygon(0 0,100% 24%,78% 100%,0 82%)}
+.intro-hull{position:absolute;left:5%;bottom:15%;width:90%;height:22%;background:repeating-linear-gradient(0deg,#3a2119 0 5px,#8b5a36 6px 9px,#2a1b17 10px 12px);clip-path:polygon(0 0,100% 0,84% 75%,65% 100%,24% 100%,8% 65%);border-bottom:3px solid #dfb878}
+.intro-flag{position:absolute;left:50%;top:-5%;font-size:clamp(15px,3vw,27px);color:#07121b;text-shadow:0 0 4px #8efaff;background:#d5e7dc;padding:2px 8px;clip-path:polygon(0 0,100% 0,75% 50%,100% 100%,0 100%)}
+.intro-cloud{position:absolute;width:70%;height:20%;border-radius:50%;background:#7afaff20;filter:blur(22px);left:15%;animation:cloudDrift 6s ease-in-out infinite alternate}
+.cloud-one{top:40%}.cloud-two{top:57%;left:30%;animation-delay:-2s}
+.intro-sea{position:absolute;left:-10%;right:-10%;bottom:-7%;height:38%;background:repeating-linear-gradient(177deg,transparent 0 13px,#39d8e32c 14px 16px,transparent 17px 27px),linear-gradient(180deg,#0c5365aa,#03111d 78%);transform:perspective(200px) rotateX(9deg);box-shadow:0 -12px 35px #36dbe433}
+.intro-mist{position:absolute;inset:45% -20% 12%;background:radial-gradient(ellipse at 25% 55%,#a2ffff30,transparent 35%),radial-gradient(ellipse at 72% 35%,#9dfbff25,transparent 40%);filter:blur(15px);animation:mistSweep 5s ease-in-out infinite alternate}
+.intro-caption{position:absolute;z-index:2;left:5%;right:5%;bottom:7%;padding:clamp(12px,2vw,24px);text-align:left;border:1px solid #9deefb77;border-left:4px solid #61e8f4;background:linear-gradient(100deg,#04121eeF,#082c3bd9);box-shadow:0 0 30px #00eaff19;animation:captionRise .8s .3s both}
+.intro-kicker{font:700 clamp(8px,1.2vw,12px) 'Cinzel Decorative',Georgia,serif;letter-spacing:clamp(1px,.3vw,4px);color:#72f5f2}
+.intro-caption p{margin:7px 0 5px;font:clamp(16px,3vw,30px)/1.25 'Cinzel Decorative',Georgia,serif;color:#ffe0a1;text-shadow:0 0 18px #e8b76555}
+.intro-caption small{font-size:clamp(7px,1vw,10px);letter-spacing:2px;color:#9bbec9}
+#skip-intro{position:absolute;z-index:3;right:12px;top:12px;padding:7px 10px;border:1px solid #8cecf577;border-radius:5px;background:#061a28c9;color:#c9faff;font-size:10px;cursor:pointer}
+@keyframes introFadeIn{from{opacity:0}to{opacity:1}}@keyframes moonBreathe{50%{box-shadow:0 0 35px #8ffaffcc,0 0 110px #42d8e877;transform:translateX(-50%) scale(1.04)}}@keyframes starsFlicker{50%{opacity:.45}}@keyframes introShipSail{0%{transform:translate(-25%,18px) scale(.78);opacity:0}22%{opacity:1}65%{transform:translate(-50%,-4px) scale(1)}100%{transform:translate(-50%,-9px) scale(1.04)}}@keyframes cloudDrift{to{transform:translateX(35px) scale(1.1);opacity:.55}}@keyframes mistSweep{to{transform:translateX(-25px);opacity:.65}}@keyframes captionRise{from{transform:translateY(15px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:760px){.level-strip{grid-template-columns:1fr auto}.level-strip>b{grid-column:1/-1}.level-tabs{justify-content:flex-start;flex-wrap:wrap}.audio-controls{flex-wrap:wrap}}
+@media(max-width:600px){.intro-ship{top:28%;width:58%;height:34%}.intro-caption{bottom:6%;padding:12px}.intro-caption p{font-size:clamp(15px,4.5vw,23px)}.intro-kicker{letter-spacing:1.5px}}
+@media(prefers-reduced-motion:reduce){.cinematic-intro *{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Cinematic victory epilogues: one illustrated celebration for each realm. */
+.victory-scene{position:absolute;z-index:12;inset:0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;opacity:0;pointer-events:none;background:#030911;line-height:1.4;transition:opacity .65s ease}.victory-scene.show{opacity:1;pointer-events:auto}.victory-art{position:absolute;inset:0;background-image:url("victory-scenes.png");background-repeat:no-repeat;background-size:100% 300%;background-position:center 0%;animation:victoryPan 12s ease-in-out infinite alternate;transform:scale(1.03)}.victory-level-2 .victory-art{background-position:center 50%}.victory-level-3 .victory-art{background-position:center 100%}.victory-vignette{position:absolute;inset:0;background:linear-gradient(0deg,#020812f2 0%,#04101bce 29%,transparent 78%),linear-gradient(90deg,#02081255,transparent 65%)}.victory-copy{position:relative;z-index:2;width:min(92%,680px);margin:0 auto 4%;padding:clamp(13px,3vw,27px);text-align:center;border:1px solid #78e7e3aa;border-bottom:3px solid #55ded8;background:linear-gradient(120deg,#04131dec,#081e2be8);box-shadow:0 0 32px #12d7d833;transform:translateY(24px);opacity:0;transition:transform .8s .2s,opacity .8s .2s}.victory-scene.show .victory-copy{transform:translateY(0);opacity:1}.victory-copy span{font-size:clamp(8px,1.4vw,12px);letter-spacing:3px;color:#79f0e8;font-weight:800}.victory-copy h2{margin:6px 0;color:#ffe2a1;font:700 clamp(19px,4vw,34px)/1.15 'Cinzel Decorative',Georgia,serif;text-shadow:0 0 20px #ffcf6b55}.victory-copy p{margin:8px auto 12px;max-width:580px;color:#edf7f4;font:clamp(11px,1.7vw,15px)/1.6 Georgia,serif}.victory-copy small{display:block;margin-bottom:12px;color:#a9d7d8;font-size:clamp(7px,1vw,10px);letter-spacing:1.5px}.victory-copy button{padding:10px 17px;border:1px solid #ffe2a0;border-radius:5px;background:linear-gradient(#f6d98f,#b88742);color:#18202a;font-weight:800}.victory-level-2 .victory-copy{border-color:#d69bffb0;border-bottom-color:#bc69ff;box-shadow:0 0 32px #a632ff44}.victory-level-2 .victory-copy span{color:#dfaaff}.victory-level-2 .victory-copy h2{color:#f1c5ff}.victory-level-2 .victory-copy button{border-color:#e9b5ff;background:linear-gradient(#e8baff,#8640b6);color:#170d20}.victory-level-3 .victory-copy{border-color:#ff8d6eaa;border-bottom-color:#ff4a3e;box-shadow:0 0 35px #ff382d55}.victory-level-3 .victory-copy span{color:#ff9e84}.victory-level-3 .victory-copy h2{color:#ffd0a0}.victory-level-3 .victory-copy button{border-color:#ffb07b;background:linear-gradient(#ffc080,#b6422c);color:#260d0a}.victory-sparkles{position:absolute;z-index:1;top:8%;left:0;right:0;text-align:center;letter-spacing:clamp(8px,3vw,30px);color:#fff0b4;text-shadow:0 0 14px #ffe17b;animation:sparkleFloat 3s ease-in-out infinite alternate;pointer-events:none}@keyframes victoryPan{from{transform:scale(1.03) translateX(-.3%)}to{transform:scale(1.12) translateX(.5%)}}@keyframes sparkleFloat{from{opacity:.35;transform:translateY(0)}to{opacity:1;transform:translateY(9px)}}@media(max-width:600px){.victory-copy{margin-bottom:3%;padding:12px}.victory-copy p{font-size:11px}.victory-copy h2{font-size:clamp(17px,5vw,26px)}}@media(prefers-reduced-motion:reduce){.victory-art,.victory-sparkles{animation:none}}
+
+/* Secret post-game epilogue: the storm settles into a lantern-lit, peaceful sea. */
+.victory-finale .victory-art{filter:hue-rotate(105deg) saturate(.72) brightness(1.18);animation:victoryPan 18s ease-in-out infinite alternate}
+.victory-finale .victory-vignette{background:radial-gradient(ellipse at 50% 18%,#ffe6a033,transparent 48%),linear-gradient(0deg,#03151beF 0%,#06313bb8 35%,#04242b22 82%),linear-gradient(90deg,#03242b55,transparent 70%)}
+.victory-finale .victory-copy{border-color:#f5d990cc;border-bottom-color:#7ce5d5;background:linear-gradient(120deg,#05232bea,#073e43e8);box-shadow:0 0 42px #8cebd655}
+.victory-finale .victory-copy span{color:#9af3df}
+.victory-finale .victory-copy h2{color:#ffe6a2;text-shadow:0 0 24px #ffe6a288}
+.victory-finale .victory-copy button{background:linear-gradient(#baf4df,#58bca8);border-color:#d7fff0;color:#062522}
+.victory-finale .victory-sparkles{color:#fff0a6;text-shadow:0 0 18px #fff1a6;animation:sparkleFloat 2s ease-in-out infinite alternate}
+
+/* Mobile-first polish pass for Ghost Ship Final Epilogue */
+@media (max-width: 650px) {
+  body { padding: 0; overflow-x: hidden; }
+  .app-shell { width: 100%; max-width: 100%; padding: 10px; border-radius: 0; border-left: 0; border-right: 0; overflow: visible; }
+  .hero { grid-template-columns: 38px minmax(0,1fr); gap: 8px; }
+  .hero > div:nth-child(2) { min-width: 0; }
+  .hero h1 { overflow-wrap: anywhere; }
+  .hero h1 span { font-size: clamp(11px, 3.5vw, 15px); letter-spacing: .01em; line-height: 1.18; }
+  .hero h1 strong { font-size: clamp(22px, 7.1vw, 32px); line-height: 1.05; letter-spacing: -.025em; margin-top: 3px; }
+  .tagline { font-size: 11px; line-height: 1.4; }
+  .header-ship { display: none !important; }
+  .mission { grid-template-columns: minmax(0,1fr); }
+  .mission p { font-size: 11px; line-height: 1.35; }
+  .level-strip { grid-template-columns: minmax(0,1fr); }
+  .level-strip > b { grid-column: 1; }
+  .level-tabs { grid-column: 1; grid-row: auto; }
+  .audio-controls { justify-content: stretch; }
+  .audio-controls button { flex: 1; font-size: 12px; }
+  .play-layout { display: flex; flex-direction: column; gap: 10px; }
+  .map-frame { width: 100%; }
+  .frame-heading { flex-wrap: wrap; }
+  .frame-heading i { min-width: 12px; }
+  .frame-heading small { font-size: 8px; }
+  .canvas-wrap { width: 100%; }
+  #game { width: 100%; height: auto; aspect-ratio: 10 / 7; }
+  .legend { padding-top: 7px; }
+  .control-panel { width: 100%; }
+  .dpad { max-width: 290px; grid-template-rows: repeat(2, 58px); }
+  .dpad button { min-height: 52px; }
+  .answers { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .answers button { min-height: 42px; font-size: 12px; }
+  .riddle-text { font: 600 14px/1.45 Cinzel, Georgia, serif; }
+  .feedback { font-size: 11px; }
+  .cinematic-intro { position: absolute; inset: 0; }
+  .intro-moon { width: clamp(72px, 20vw, 110px); top: 7%; }
+  .intro-ship { top: 22%; width: 52%; height: 30%; }
+  .intro-caption { left: 4%; right: 4%; bottom: 4%; padding: 10px 12px; max-height: 39%; overflow-y: auto; }
+  .intro-kicker { display: block; font-size: 9px; line-height: 1.3; letter-spacing: 1px; }
+  .intro-caption p { font-size: clamp(13px, 4vw, 17px); line-height: 1.3; margin: 5px 0; }
+  .intro-caption small { font-size: 8px; line-height: 1.3; letter-spacing: 1px; }
+  #skip-intro { top: 7px; right: 7px; font-size: 11px; padding: 7px 9px; }
+  .comic-bubble { left: 3%; right: 3%; bottom: 3%; width: 94%; max-width: none; max-height: 31%; overflow-y: auto; padding: 9px 30px 9px 10px; gap: 8px; }
+  .captain-portrait { display: none; }
+  .bubble-name { font-size: 9px; }
+  .comic-bubble p { font: 600 12px/1.4 Cinzel, Georgia, serif; }
+  .victory-copy { width: 94%; max-height: 43%; overflow-y: auto; margin-bottom: 3%; padding: 10px; }
+  .victory-copy span { font-size: 8px; letter-spacing: 1.3px; }
+  .victory-copy h2 { font-size: clamp(17px, 5vw, 24px); }
+  .victory-copy p { font-size: 12px; line-height: 1.4; margin: 6px auto 8px; }
+  .victory-copy small { font-size: 8px; margin-bottom: 8px; }
+  .victory-copy button { min-height: 42px; }
+  .status-bar { margin-bottom: 6px; }
+}
+
+/* On phones, bring the riddle to the player instead of making them scroll to the sidebar. */
+@media (max-width: 650px) {
+  body.mobile-riddle-open { overflow: hidden; }
+  body.mobile-riddle-open::after { content: ""; position: fixed; inset: 0; z-index: 100; background: #010810d9; backdrop-filter: blur(5px); }
+  body.mobile-riddle-open #riddle-panel { position: fixed; z-index: 101; left: 50%; top: 50%; transform: translate(-50%,-50%); width: min(92vw, 430px); max-height: min(82dvh, 620px); overflow-y: auto; margin: 0; padding: 18px; border: 2px solid #62e8df; border-radius: 14px; background: linear-gradient(155deg,#102f40,#04131f); box-shadow: 0 0 0 1px #f2d39466, 0 20px 70px #000e, 0 0 35px #29e3df2b; }
+  body.mobile-riddle-open #riddle-panel h2 { font-size: 17px; line-height: 1.35; }
+  body.mobile-riddle-open #riddle-text { font-size: 15px; line-height: 1.5; }
+  body.mobile-riddle-open #answer-options { grid-template-columns: 1fr; gap: 8px; }
+  body.mobile-riddle-open #answer-options button { min-height: 44px; padding: 10px 12px; text-align: left; font-size: 14px; }
+  body.mobile-riddle-open #riddle-feedback { font-size: 12px; line-height: 1.45; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  body { padding: 0; }
+  .app-shell { padding: 6px 10px; }
+  .hero { grid-template-columns: 34px minmax(0,1fr); padding-bottom: 6px; }
+  .skull-mark { width: 32px; height: 32px; font-size: 22px; }
+  .hero h1 span { font-size: 11px; }
+  .hero h1 strong { font-size: 21px; }
+  .tagline, .mission { display: none !important; }
+  .level-strip { padding: 5px 8px; margin-bottom: 7px; }
+  .play-layout { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(190px,.7fr); gap: 8px; }
+  .map-frame, .control-panel { padding: 6px; }
+  .dpad { grid-template-rows: repeat(2, 38px); max-width: 220px; }
+  .dpad button { min-height: 34px; }
+  .dpad button:not([disabled]) { font-size: 20px; }
+  .control-panel section+section { margin-top: 6px; padding-top: 6px; }
+  .intro-ship { top: 18%; height: 31%; }
+  .intro-caption { left: 26%; right: 3%; bottom: 3%; max-height: 48%; padding: 7px 10px; }
+  .intro-caption p { font-size: 14px; line-height: 1.25; }
+  .intro-moon { width: 65px; top: 4%; left: 13%; }
+  .victory-copy { max-height: 48%; padding: 8px; margin-bottom: 2%; }
+  .victory-copy p { font-size: 11px; line-height: 1.3; margin: 4px auto; }
+}
+
+
+/* Mobile header collision fix + optional rotate-to-landscape prompt */
+.hero { min-width: 0; }
+.hero > div:nth-child(2) { min-width: 0; }
+.hero .eyebrow { position: static; display: block; max-width: 100%; margin: 0 0 7px; line-height: 1.35; overflow-wrap: anywhere; }
+.hero h1 { display: block; min-width: 0; line-height: 1.08; }
+.hero h1 span, .hero h1 strong { position: static; max-width: 100%; overflow-wrap: normal; word-break: normal; }
+.rotate-prompt { display: none; }
+.rotate-card { width: min(88vw, 380px); padding: 24px 22px; border: 1px solid #62dfe2; border-radius: 18px; text-align: center; color: #e7f4f4; background: linear-gradient(155deg,#123747,#04121e 78%); box-shadow: 0 18px 70px #000d, inset 0 0 0 2px #d6b77822; }
+.rotate-icon { font-size: 34px; margin-bottom: 8px; }
+.rotate-kicker { margin: 0 0 8px; color: #76e7e5; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+.rotate-card h2 { margin: 0 0 10px; color: #f1d59b; font: 700 23px/1.2 Cinzel, Georgia, serif; }
+.rotate-card p:not(.rotate-kicker) { margin: 0 0 18px; color: #c9e0e5; font-size: 14px; line-height: 1.55; }
+#rotate-dismiss { min-height: 44px; width: 100%; border: 1px solid #7ce9e4; border-radius: 9px; padding: 11px 14px; color: #eaffff; background: #123e4d; font-weight: 700; }
+#rotate-dismiss:focus-visible { outline: 3px solid #f1d59b; outline-offset: 3px; }
+@media (max-width: 650px) and (orientation: portrait) {
+  .rotate-prompt:not(.dismissed) { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; padding: 20px; background: #01070deF; backdrop-filter: blur(8px); }
+  .hero { grid-template-columns: 34px minmax(0,1fr); align-items: start; gap: 8px; }
+  .hero .eyebrow { font-size: 8px; letter-spacing: 1.1px; }
+  .hero h1 span { font-size: clamp(12px, 3.7vw, 16px); letter-spacing: 0; line-height: 1.2; }
+  .hero h1 strong { margin-top: 3px; font-size: clamp(22px, 7.2vw, 31px); line-height: 1.05; letter-spacing: -.025em; }
+  .tagline { overflow-wrap: normal; }
+}
+@media (max-width: 650px) and (orientation: landscape) { .rotate-prompt { display: none !important; } }
+
+/* Voyage progression + attempt counters */
+.level-strip { grid-template-columns: max-content minmax(0,1fr) auto; }
+.progress-title { color:#a8cbd5; font-size:9px; font-weight:800; letter-spacing:1px; white-space:nowrap; }
+.level-tabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; min-width:0; }
+.level-tab { min-width:0; grid-template-columns:20px minmax(0,1fr); }
+.level-tab .attempt-label { grid-column:1 / -1; padding-top:4px; font-size:8px; letter-spacing:.2px; text-align:center; white-space:nowrap; }
+.level-tab.locked-level { opacity:.48; cursor:not-allowed; filter:saturate(.55); }
+.level-tab.locked-level::after { content:'🔒'; font:10px Arial,sans-serif; grid-column:2; grid-row:1; justify-self:end; }
+.level-tab.cleared-level { border-color:#69d9b0; }
+.level-tab.cleared-level .attempt-label { color:#75e6b6; }
+@media (max-width:950px) {
+ .level-strip { grid-template-columns:minmax(0,1fr) auto; }
+ .progress-title { grid-column:1; }
+ .level-tabs { grid-column:1 / -1; grid-row:2; }
+ .audio-controls { grid-column:2; grid-row:1; }
+}
+@media (max-width:650px) {
+ .level-strip { grid-template-columns:minmax(0,1fr); }
+ .progress-title { grid-column:1; }
+ .level-tabs { grid-column:1; grid-row:auto; }
+ .level-tab { grid-template-columns:1fr; text-align:center; padding:7px 3px; }
+ .level-tab .level-number { font-size:15px; }
+ .level-tab b { font-size:8px; line-height:1.25; }
+ .level-tab .attempt-label { font-size:7px; white-space:normal; }
+ .level-tab.locked-level::after { grid-column:1; grid-row:1; justify-self:end; }
+ .audio-controls { grid-column:1; grid-row:auto; }
+}
+
+
+/* v4 refinement: restore compact level tabs and keep numeral + title on one line */
+.level-tabs { gap: 5px; }
+.level-tab {
+  grid-template-columns: 15px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0 4px;
+  padding: 5px 7px;
+  font-size: 12px;
+  min-height: 0;
+}
+.level-tab .level-number { grid-column: 1; grid-row: 1; font-size: 13px; line-height: 1.2; }
+.level-tab b {
+  grid-column: 2; grid-row: 1;
+  min-width: 0; font-size: 9px; line-height: 1.2;
+  white-space: nowrap; overflow: visible; text-align: left;
+}
+.level-tab .attempt-label { grid-column: 1 / -1; grid-row: 2; padding-top: 3px; font-size: 7px; letter-spacing: 0; text-align: center; white-space: nowrap; }
+.level-tab.locked-level::after { grid-column: 2; grid-row: 1; font-size: 8px; }
+@media (max-width: 650px) {
+  .level-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .level-tab { grid-template-columns: 13px minmax(0, 1fr); padding: 5px 4px; text-align: left; }
+  .level-tab .level-number { font-size: 12px; }
+  .level-tab b { font-size: 8px; white-space: nowrap; }
+  .level-tab .attempt-label { font-size: 6px; white-space: nowrap; }
+}
+
+
+/* v6: repair phone header width and landscape game visibility */
+.hero { min-width: 0; }
+.hero > div:nth-child(2) { min-width: 0; }
+.hero .eyebrow {
+  display: block !important;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  letter-spacing: .5px;
+  line-height: 1.25;
+}
+@media (max-width: 650px) {
+  .hero { grid-template-columns: 34px minmax(0, 1fr) !important; }
+  .hero > div:nth-child(2) { grid-column: 2; min-width: 0; width: 100%; }
+  .hero .eyebrow { font-size: 8px; letter-spacing: .35px; }
+}
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 600px) {
+  html, body { width: 100%; height: 100%; min-height: 0; }
+  body { height: 100dvh; min-height: 0; overflow: hidden; padding: 0; }
+  .app-shell {
+    box-sizing: border-box;
+    width: 100%; max-width: 100%; height: 100dvh; min-height: 0;
+    overflow: hidden; display: flex; flex-direction: column;
+    padding: 4px 7px; gap: 0;
+  }
+  .hero {
+    display: grid !important;
+    grid-template-columns: 30px minmax(0,1fr) !important;
+    grid-template-rows: auto;
+    flex: 0 0 auto; min-height: 0; padding: 1px 2px 4px; margin: 0;
+    gap: 6px;
+  }
+  .hero > div:nth-child(2) { grid-column: 2; grid-row: 1; min-width: 0; }
+  .hero .eyebrow { font-size: 8px; white-space: nowrap !important; }
+  .hero h1 { margin: 0; line-height: 1; }
+  .hero h1 span { display: block; font-size: 10px; line-height: 1.15; }
+  .hero h1 strong { display: block; margin-top: 1px; font-size: 18px; line-height: 1.05; }
+  .hero .tagline, .hero .mission, .header-ship { display: none !important; }
+  .level-strip { flex: 0 0 auto; min-height: 0; margin: 0 0 4px; padding: 3px 6px; gap: 4px; }
+  .play-layout {
+    flex: 1 1 0; min-height: 0; height: 0; overflow: hidden;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(170px, .8fr);
+    align-items: stretch; gap: 6px;
+  }
+  .map-frame {
+    display: flex; flex-direction: column; min-width: 0; min-height: 0;
+    height: 100%; overflow: hidden; padding: 4px;
+  }
+  .frame-heading { flex: 0 0 auto; min-height: 16px; padding: 0 2px 3px; font-size: 8px; }
+  .frame-heading small { font-size: 7px; }
+  .canvas-wrap {
+    position: relative; flex: 1 1 0; min-height: 0; height: 0;
+    width: 100%; overflow: hidden;
+  }
+  #game {
+    display: block; width: 100% !important; height: 100% !important;
+    max-width: 100%; max-height: 100%; object-fit: contain;
+  }
+  .legend { flex: 0 0 auto; padding: 2px 1px 0; gap: 4px; font-size: 6px; }
+  .control-panel {
+    display: block; box-sizing: border-box; min-width: 0; min-height: 0;
+    width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto;
+    overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+    padding: 6px; touch-action: pan-y;
+  }
+  .control-panel section { min-width: 0; }
+  .control-panel h2 { font-size: 12px; margin-bottom: 4px; }
+  .control-panel section+section { margin-top: 5px; padding-top: 5px; }
+  .dpad { grid-template-rows: repeat(2, 30px); gap: 3px; max-width: 170px; margin: 6px auto; }
+  .dpad button { min-height: 28px; }
+  .dpad button:not([disabled]) { font-size: 18px; }
+  .dpad button small { font-size: 7px; }
+  .help, .message { font-size: 8px; line-height: 1.25; }
+  .status-bar, .mobile-hint { display: none !important; }
+}
+
+
+/* v7: phone landscape layout — target short screens regardless of CSS width.
+   Keep the map visible; compact the header/progress strip; scroll only the menu. */
+@media (orientation: landscape) and (max-height: 700px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+  body {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .app-shell {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 3px 6px;
+  }
+  .hero {
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) !important;
+    grid-template-rows: auto;
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: 1px 2px 3px;
+    margin: 0;
+    gap: 5px;
+  }
+  .hero > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    width: 100%;
+  }
+  .hero .eyebrow {
+    display: block !important;
+    width: max-content;
+    max-width: 100%;
+    font-size: 7px;
+    line-height: 1;
+    letter-spacing: .3px;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+  .hero h1 { margin: 0 !important; line-height: 1 !important; }
+  .hero h1 span { display: block; font-size: 9px !important; line-height: 1.05 !important; }
+  .hero h1 strong { display: block; font-size: 16px !important; line-height: 1.05 !important; margin-top: 1px; }
+  .hero .tagline, .hero .mission, .header-ship { display: none !important; }
+
+  .level-strip {
+    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto;
+    flex: 0 0 auto;
+    min-height: 0;
+    gap: 4px 8px;
+    margin: 0 0 4px;
+    padding: 4px 6px;
+  }
+  .progress-title { grid-column: 1; grid-row: 1; font-size: 10px !important; line-height: 1.1; }
+  .audio-controls { grid-column: 2; grid-row: 1; gap: 4px; }
+  .audio-controls button { min-height: 28px; padding: 3px 8px; font-size: 11px; }
+  .level-tabs { grid-column: 1 / -1; grid-row: 2; display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .level-tab { min-height: 0; padding: 4px 5px; gap: 1px 3px; }
+  .level-tab .level-number { font-size: 10px !important; }
+  .level-tab b { font-size: 8px !important; line-height: 1.1; }
+  .level-tab .attempt-label { font-size: 6px !important; padding-top: 2px; }
+
+  .play-layout {
+    flex: 1 1 0;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.25fr) minmax(180px, .75fr);
+    align-items: stretch;
+    gap: 6px;
+  }
+  .map-frame {
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    padding: 4px;
+  }
+  .frame-heading {
+    flex: 0 0 auto;
+    min-height: 14px;
+    padding: 0 2px 3px;
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  .frame-heading small { font-size: 7px; }
+  .canvas-wrap {
+    position: relative;
+    display: block;
+    flex: 1 1 0;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  #game {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .legend { flex: 0 0 auto; padding: 2px 1px 0; gap: 4px; font-size: 6px; line-height: 1; }
+
+  .control-panel {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding: 6px;
+  }
+  .control-panel section { min-width: 0; }
+  .control-panel h2 { font-size: 12px; margin-bottom: 4px; line-height: 1.15; }
+  .control-panel section + section { margin-top: 5px; padding-top: 5px; }
+  .dpad { grid-template-rows: repeat(2, 28px); gap: 3px; max-width: 170px; margin: 5px auto; }
+  .dpad button { min-height: 26px; }
+  .dpad button:not([disabled]) { font-size: 17px; }
+  .dpad button small { font-size: 7px; }
+  .help, .message { font-size: 8px; line-height: 1.2; }
+  .status-bar, .mobile-hint { display: none !important; }
+}
+
+
+/* v8: keep the captain visible and make long dialogue readable on phones. */
+
+/* Portrait phones: compact bubble, visible captain, scroll the text itself. */
+@media (max-width: 650px) and (orientation: portrait) {
+  .comic-bubble.visible {
+    display: flex !important;
+    align-items: flex-start;
+    box-sizing: border-box;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+    width: 96%;
+    max-width: none;
+    max-height: 28%;
+    overflow: hidden;
+    padding: 8px 28px 8px 8px;
+    gap: 8px;
+  }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 58px;
+    transform: scale(.9);
+    transform-origin: top left;
+    margin-right: -4px;
+  }
+  .comic-bubble .dialogue-copy {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding-right: 2px;
+  }
+  .comic-bubble .bubble-name { font-size: 8px; line-height: 1.2; margin-bottom: 3px; }
+  .comic-bubble p {
+    font-size: 11px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Landscape phones: dialogue must stay inside the map and never dominate it. */
+@media (orientation: landscape) and (max-height: 700px) {
+  .comic-bubble.visible {
+    display: flex !important;
+    align-items: flex-start;
+    box-sizing: border-box;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+    width: 96%;
+    max-width: none;
+    max-height: 24%;
+    overflow: hidden;
+    padding: 4px 24px 4px 5px;
+    gap: 5px;
+  }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 40px;
+    transform: scale(.72);
+    transform-origin: top left;
+    margin-right: -8px;
+  }
+  .comic-bubble .dialogue-copy {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding-right: 2px;
+  }
+  .comic-bubble .bubble-name { font-size: 7px; line-height: 1.1; margin-bottom: 2px; }
+  .comic-bubble p { font-size: 9px; line-height: 1.2; }
+  .comic-bubble button { top: 0; right: 2px; font-size: 16px; }
+}
+
+
+/* v9: dialogue is fully visible without its own scrollbar in either phone orientation. */
+@media (max-width: 650px) and (orientation: portrait) {
+  .comic-bubble.visible {
+    display: flex !important;
+    align-items: flex-start;
+    box-sizing: border-box;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+    width: 96%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding: 7px 25px 7px 7px;
+    gap: 7px;
+  }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 50px;
+    transform: scale(.78);
+    transform-origin: top left;
+    margin-right: -9px;
+  }
+  .comic-bubble .dialogue-copy {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+  }
+  .comic-bubble .bubble-name {
+    font-size: 8px;
+    line-height: 1.1;
+    letter-spacing: .6px;
+    margin: 0 0 3px;
+  }
+  .comic-bubble p {
+    font-size: clamp(9px, 2.8vw, 12px);
+    line-height: 1.22;
+    padding-right: 0;
+    overflow-wrap: anywhere;
+  }
+  .comic-bubble button { top: 1px; right: 2px; font-size: 17px; }
+}
+
+/* Landscape: use a compact full-width caption; no nested scrolling, map remains dominant. */
+@media (orientation: landscape) and (max-height: 700px) {
+  .comic-bubble.visible {
+    display: flex !important;
+    align-items: flex-start;
+    box-sizing: border-box;
+    left: 1.5%;
+    right: 1.5%;
+    bottom: 1.5%;
+    width: 97%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding: 4px 22px 4px 5px;
+    gap: 4px;
+  }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 34px;
+    transform: scale(.58);
+    transform-origin: top left;
+    margin-right: -12px;
+  }
+  .comic-bubble .dialogue-copy {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+  }
+  .comic-bubble .bubble-name {
+    font-size: 7px;
+    line-height: 1;
+    letter-spacing: .4px;
+    margin: 0 0 2px;
+  }
+  .comic-bubble p {
+    font-size: clamp(8px, 1.45vw, 10px);
+    line-height: 1.12;
+    padding-right: 0;
+    overflow-wrap: anywhere;
+  }
+  .comic-bubble button { top: 0; right: 1px; font-size: 15px; }
+}
+
+
+/* v10: final dialogue geometry override — no clipping, no artificial blank height. */
+.comic-bubble.visible {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  gap: 8px !important;
+  padding: 8px 28px 8px 8px !important;
+}
+.comic-bubble .captain-portrait {
+  display: block !important;
+  position: relative !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  margin: 0 !important;
+  align-self: flex-start !important;
+}
+.comic-bubble .dialogue-copy {
+  display: block !important;
+  flex: 1 1 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.comic-bubble .bubble-name {
+  display: block !important;
+  margin: 0 0 3px !important;
+  line-height: 1.1 !important;
+}
+.comic-bubble p {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.22 !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+@media (max-width: 650px) and (orientation: portrait) {
+  .comic-bubble.visible {
+    left: 2% !important;
+    right: 2% !important;
+    bottom: 2% !important;
+    width: 96% !important;
+    padding: 7px 25px 7px 7px !important;
+    gap: 7px !important;
+  }
+  .comic-bubble .captain-portrait {
+    flex-basis: 40px !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+  }
+  .comic-bubble .bubble-name { font-size: 8px !important; letter-spacing: .45px !important; }
+  .comic-bubble p { font-size: 10px !important; line-height: 1.22 !important; }
+}
+@media (orientation: landscape) and (max-height: 700px) {
+  .comic-bubble.visible {
+    left: 1.5% !important;
+    right: 1.5% !important;
+    bottom: 1.5% !important;
+    width: 97% !important;
+    padding: 4px 22px 4px 5px !important;
+    gap: 5px !important;
+  }
+  .comic-bubble .captain-portrait {
+    flex-basis: 32px !important;
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 39px !important;
+    min-height: 39px !important;
+  }
+  .comic-bubble .bubble-name { font-size: 7px !important; letter-spacing: .3px !important; }
+  .comic-bubble p { font-size: 9px !important; line-height: 1.15 !important; }
+}
+
+
+/* v11: portrait-first phone layout — bigger map, scrollable lower controls, no duplicate riddle card. */
+@media (max-width: 650px) and (orientation: portrait) {
+  body {
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+  .app-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+  .hero {
+    grid-template-columns: 34px minmax(0,1fr) !important;
+    gap: 7px !important;
+    padding: 2px 2px 6px !important;
+    margin-bottom: 6px !important;
+  }
+  .skull-mark { width: 32px !important; height: 32px !important; font-size: 21px !important; }
+  .hero .tagline, .hero .mission { display: none !important; }
+  .hero .eyebrow { font-size: 7px !important; line-height: 1.1 !important; margin-bottom: 2px !important; }
+  .hero h1 span { font-size: clamp(11px, 3.5vw, 15px) !important; line-height: 1.05 !important; }
+  .hero h1 strong { font-size: clamp(21px, 6.8vw, 29px) !important; line-height: 1 !important; margin-top: 2px !important; }
+
+  .level-strip {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 5px !important;
+    padding: 6px !important;
+    margin-bottom: 7px !important;
+  }
+  .progress-title { font-size: 11px !important; line-height: 1.1 !important; }
+  .level-tabs {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    gap: 4px !important;
+  }
+  .level-tab { min-width: 0 !important; padding: 5px 3px !important; grid-template-columns: 14px minmax(0,1fr) !important; gap: 1px 3px !important; }
+  .level-tab b { font-size: 8px !important; line-height: 1.1 !important; }
+  .level-tab .attempt-label { font-size: 6px !important; letter-spacing: 0 !important; }
+  .audio-controls { display: flex !important; gap: 5px !important; }
+  .audio-controls button { min-height: 34px !important; padding: 5px 7px !important; font-size: 11px !important; }
+
+  .play-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    overflow: visible !important;
+  }
+  .map-frame {
+    width: 100% !important;
+    padding: 4px !important;
+    border-width: 2px !important;
+  }
+  .frame-heading { padding: 2px 2px 5px !important; font-size: 9px !important; gap: 5px !important; }
+  .frame-heading small { font-size: 7px !important; }
+  .canvas-wrap { width: 100% !important; }
+  #game { display: block !important; width: 100% !important; height: auto !important; aspect-ratio: 10 / 7 !important; }
+  .legend { padding: 5px 2px 1px !important; gap: 8px !important; font-size: 8px !important; }
+
+  /* The riddle appears as a focused modal at the purple rune, not as a second card below the controls. */
+  .control-panel > #riddle-panel { display: none !important; }
+  body.mobile-riddle-open .control-panel > #riddle-panel {
+    display: block !important;
+    position: fixed !important;
+    z-index: 101 !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%,-50%) !important;
+    width: min(92vw,430px) !important;
+    max-height: min(82dvh,620px) !important;
+    overflow-y: auto !important;
+  }
+  .control-panel {
+    width: 100% !important;
+    padding: 10px !important;
+    overflow: visible !important;
+  }
+  .control-panel section:first-child { padding-bottom: 3px !important; }
+  .control-panel > #riddle-panel { margin: 0 !important; }
+  .dpad { max-width: 250px !important; grid-template-rows: repeat(2,48px) !important; gap: 5px !important; }
+  .dpad button { min-height: 46px !important; }
+  .control-panel h2 { font-size: 13px !important; }
+  .help { font-size: 11px !important; line-height: 1.35 !important; }
+
+  /* Keep the captain portrait distinct from the text; the bubble only grows to its content. */
+  .comic-bubble.visible {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    left: 2% !important;
+    right: 2% !important;
+    bottom: 2% !important;
+    width: 96% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 8px 25px 8px 8px !important;
+    gap: 12px !important;
+  }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    position: relative !important;
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    min-width: 48px !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    transform: none !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  .comic-bubble .captain-hat { left: 5px; width: 34px; }
+  .comic-bubble .captain-face { left: 9px; top: 24px; width: 28px; height: 31px; }
+  .comic-bubble .captain-coat { left: 2px; width: 40px; }
+  .comic-bubble .dialogue-copy {
+    display: block !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .comic-bubble .bubble-name { font-size: 8px !important; line-height: 1.1 !important; margin: 0 0 3px !important; }
+  .comic-bubble p { font-size: 10px !important; line-height: 1.22 !important; margin: 0 !important; padding: 0 !important; overflow-wrap: anywhere !important; }
+}
+
+/* Preserve ordinary page scrolling on phones; only the riddle modal locks the background. */
+@media (max-width: 650px) and (orientation: portrait) {
+  body:not(.mobile-riddle-open) { overflow-y: auto !important; }
+}
+
+
+/* v12 polish: laptop recommendation, larger portrait sea, arcade touch controls, visible Captain Jack. */
+.mobile-dpad-overlay { display:none; }
+.captains-hall ol { list-style:none; padding:0; margin:8px 0 0; display:grid; gap:6px; }
+.captains-hall li { display:flex; align-items:center; gap:7px; padding:7px 8px; border:1px solid #294b5a; border-radius:7px; background:#071925; color:#d8e8e8; font-size:12px; }
+.hall-rank { min-width:22px; color:#f1cf8c; }
+.hall-name { flex:1; min-width:0; overflow-wrap:anywhere; }
+.hall-score { color:#7df0e9; white-space:nowrap; font-size:11px; }
+.hall-note { margin:0; color:#93b1bd; font-size:11px; }
+.captains-hall h2 { margin-bottom:4px !important; }
+.captain-portrait { isolation:isolate; }
+.captain-face { z-index:2 !important; }
+.captain-face:before { z-index:0 !important; left:-2px !important; top:2px !important; width:calc(100% + 4px) !important; height:calc(100% + 2px) !important; border-radius:48% 48% 38% 38% !important; }
+.captain-face .eye, .captain-face .eyebrow, .captain-face .nose { z-index:3 !important; }
+.captain-face .moustache { z-index:4 !important; }
+.captain-face .beard { z-index:4 !important; }
+@media (max-width:650px) {
+ .rotate-prompt:not(.dismissed) { display:grid !important; }
+ .rotate-card { width:min(92vw,390px); }
+ .rotate-card h2 { font-size:clamp(22px,6vw,30px); }
+ .rotate-card p { font-size:14px; line-height:1.5; }
+}
+@media (max-width:650px) and (orientation:portrait) {
+ .canvas-wrap { position:relative !important; }
+ #game { aspect-ratio:10 / 8.2 !important; height:auto !important; width:100% !important; }
+ .mobile-dpad-overlay { display:block; position:absolute; z-index:8; right:10px; bottom:10px; left:auto; pointer-events:none; }
+ .mobile-dpad-cluster { display:grid; grid-template-columns:repeat(3,34px); grid-template-rows:repeat(3,34px); gap:3px; pointer-events:auto; }
+ .mobile-dpad-cluster button { width:34px; height:34px; min-height:34px; padding:0; border:1px solid #80e9eb99; border-radius:9px; color:#d8ffff; font-size:15px; font-weight:800; background:rgba(3,22,34,.48); box-shadow:0 2px 0 #020b12a8; backdrop-filter:blur(2px); touch-action:manipulation; }
+ .mobile-dpad-cluster button:nth-child(1) { grid-column:2;grid-row:1; }
+ .mobile-dpad-cluster button:nth-child(2) { grid-column:1;grid-row:2; }
+ .mobile-dpad-cluster button:nth-child(3) { grid-column:2;grid-row:3; }
+ .mobile-dpad-cluster button:nth-child(4) { grid-column:3;grid-row:2; }
+ .mobile-dpad-cluster button:active { background:rgba(48,157,170,.75); transform:scale(.96); }
+ .control-panel .dpad { display:none !important; }
+ .control-panel section:first-child { padding-bottom:5px !important; }
+ .control-panel section:first-child .help { margin-bottom:2px !important; }
+ .comic-bubble.visible { gap:9px !important; padding:8px 25px 8px 8px !important; }
+ .comic-bubble .captain-portrait { flex:0 0 58px !important; width:58px !important; min-width:58px !important; height:68px !important; min-height:68px !important; overflow:hidden !important; }
+ .comic-bubble .captain-hat { z-index:5 !important; left:5px !important; top:5px !important; width:43px !important; height:15px !important; }
+ .comic-bubble .captain-hat:before { height:5px !important; bottom:-4px !important; }
+ .comic-bubble .captain-hat:after { width:8px !important; height:8px !important; right:5px !important; }
+ .comic-bubble .captain-face { z-index:3 !important; left:12px !important; top:23px !important; width:34px !important; height:36px !important; background:linear-gradient(90deg,#a86442,#f4c992 48%,#b97650) !important; }
+ .comic-bubble .captain-face:before { top:0 !important; left:-3px !important; width:calc(100% + 6px) !important; height:calc(100% + 2px) !important; }
+ .comic-bubble .captain-face .eye { top:10px !important; width:4px !important; height:5px !important; background:#101b22 !important; }
+ .comic-bubble .captain-face .eye.left { left:7px !important; }
+ .comic-bubble .captain-face .eye.right { right:7px !important; }
+ .comic-bubble .captain-face .eyebrow { top:6px !important; width:8px !important; height:2px !important; }
+ .comic-bubble .captain-face .nose { left:15px !important; top:15px !important; }
+ .comic-bubble .captain-face .moustache { top:21px !important; left:3px !important; width:28px !important; }
+ .comic-bubble .captain-face .beard { top:24px !important; left:5px !important; width:25px !important; height:11px !important; }
+ .comic-bubble .captain-coat { z-index:1 !important; bottom:-7px !important; left:2px !important; width:50px !important; height:28px !important; }
+ .comic-bubble .dialogue-copy { position:relative; z-index:2; }
+ .captains-hall li { font-size:11px; }
+}
+@media (max-width:650px) and (orientation:landscape) {
+ .mobile-dpad-overlay { display:none !important; }
+}
+
+/* v13: arcade D-pad in the lower-right corner, like a compact gamepad. */
+@media (max-width:650px) and (orientation:portrait) {
+ .mobile-dpad-overlay { right:12px !important; left:auto !important; bottom:12px !important; }
+ .mobile-dpad-cluster { grid-template-columns:repeat(3,34px) !important; grid-template-rows:repeat(3,34px) !important; gap:3px !important; }
+ .mobile-dpad-cluster button:nth-child(1) { grid-column:2 !important; grid-row:1 !important; }
+ .mobile-dpad-cluster button:nth-child(2) { grid-column:1 !important; grid-row:2 !important; }
+ .mobile-dpad-cluster button:nth-child(3) { grid-column:2 !important; grid-row:3 !important; }
+ .mobile-dpad-cluster button:nth-child(4) { grid-column:3 !important; grid-row:2 !important; }
+ .control-panel .dpad { display:none !important; }
+}
+
+
+/* v15 desktop portrait restoration: undo legacy narrow sizing rules that leaked outside mobile media queries. */
+@media (min-width: 651px) {
+  .comic-bubble.visible { align-items: center !important; gap: 12px !important; }
+  .comic-bubble .captain-portrait {
+    display: block !important;
+    flex: 0 0 76px !important;
+    width: 76px !important;
+    min-width: 76px !important;
+    height: 82px !important;
+    min-height: 82px !important;
+    max-width: 76px !important;
+    max-height: 82px !important;
+    align-self: center !important;
+    overflow: hidden !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+  .comic-bubble .captain-hat { left: 9px !important; top: 8px !important; width: 56px !important; height: 22px !important; }
+  .comic-bubble .captain-face { left: 19px !important; top: 27px !important; width: 38px !important; height: 39px !important; }
+  .comic-bubble .captain-face .eye { top: 12px !important; width: 5px !important; height: 7px !important; animation: blinkEyes 4.2s infinite !important; }
+  .comic-bubble .captain-face .eye.left { left: 8px !important; }
+  .comic-bubble .captain-face .eye.right { right: 8px !important; }
+  .comic-bubble .captain-coat { left: 9px !important; width: 58px !important; }
+}
+.captains-hall .hall-note { line-height: 1.4; }
+
+/* v16: brighten the captain's face and clarify the original, eccentric pirate styling. */
+.captain-face {
+  background: linear-gradient(90deg, #d7a06f 0%, #f3d0a0 36%, #f8dcb0 52%, #d8a171 100%) !important;
+  border-color: #6b422d !important;
+  box-shadow: inset 0 2px 4px #ffe9c766;
+}
+.captain-face:before {
+  /* Dark wind-tossed hair frames the face instead of covering its skin. */
+  z-index: 1 !important;
+  left: -5px !important;
+  top: 1px !important;
+  width: calc(100% + 10px) !important;
+  height: calc(100% + 2px) !important;
+  background: linear-gradient(90deg, #211a18 0%, #211a18 12%, transparent 24%, transparent 76%, #211a18 88%, #211a18 100%) !important;
+  border-radius: 45% 45% 34% 34% !important;
+  opacity: .98;
+  pointer-events: none;
+}
+.captain-face .eye {
+  z-index: 3 !important;
+  background: #101820 !important;
+  box-shadow: 0 0 0 2px #39251f, 0 0 3px #fff0d0 !important;
+}
+.captain-face .eyebrow { z-index: 3 !important; background: #34231d !important; }
+.captain-face .nose { z-index: 3 !important; border-color: #a96b4b !important; }
+.captain-face .moustache {
+  z-index: 4 !important;
+  border-bottom-color: #2a201d !important;
+  filter: drop-shadow(0 1px 0 #8c5a38);
+}
+.captain-face .beard {
+  z-index: 4 !important;
+  background: linear-gradient(90deg, #211a18, #493027 48%, #211a18) !important;
+}
+.captain-portrait:after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 12px;
+  bottom: 7px;
+  width: 5px;
+  height: 17px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(to bottom, #d9b46d 0 3px, #30201b 3px 5px);
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+@media (max-width: 650px) and (orientation: portrait) {
+  .captain-face { background: linear-gradient(90deg, #d7a06f 0%, #f3d0a0 45%, #d8a171 100%) !important; }
+}
+
+
+/* v18: smaller warm-brown blinking eyes; soften the portrait's expression. */
+.comic-bubble .captain-face .eye {
+  top: 12px !important;
+  width: 4px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background: #8b5a32 !important;
+  box-shadow: inset 0 0 0 1px #39251f, 0 0 0 1px #e8bd83 !important;
+  animation: blinkEyes 4.2s infinite !important;
+}
+.comic-bubble .captain-face .eye.left { left: 8px !important; }
+.comic-bubble .captain-face .eye.right { right: 8px !important; animation-delay: .15s !important; }
+@keyframes blinkEyes {
+  0%, 44%, 48%, 100% { transform: scaleY(1); }
+  46% { transform: scaleY(.08); }
+}
